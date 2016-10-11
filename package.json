@@ -1,0 +1,22 @@
+{
+  "name": "ustream-embed-ga",
+  "version": "1.0.0",
+  "description": "Transmits Ustream embed iframe events to Google Analytics.",
+  "scripts": {
+    "test": "gulp mocha"
+  },
+  "author": "marton.norbert@ustream.tv",
+  "license": "MIT",
+  "dependencies": {
+    "ustream-embedapi": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.14",
+    "gulp-mocha-phantomjs": "^0.12.0",
+    "mocha": "^3.1.0",
+    "sinon": "^1.17.6"
+  }
+}
