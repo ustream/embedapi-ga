@@ -31,9 +31,9 @@ And that's it, we are done. All of the player's events have listened to the Ustr
 To make it work with GTM, you have to do some additional steps in your GTM account.
 
 1. **Create three dataLayer variables** in the gtm with the names:
-* ustreamEventAction
-* ustreamEventCategory
-* ustreamEventLabel
+ustreamEventAction
+ustreamEventCategory
+ustreamEventLabel
 
 2. **Create a new trigger** with the name: ustreamTriggerEvent
 
