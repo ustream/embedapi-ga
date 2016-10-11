@@ -30,10 +30,10 @@ And that's it, we are done. All of the player's events have listened to the Ustr
 ## Usage with Google Tag Manager
 To make it work with GTM, you have to do some additional steps in your GTM account.
 
-1. **Create three dataLayer variables** in the gtm with the names:
-ustreamEventAction
-ustreamEventCategory
-ustreamEventLabel
+1. **Create three dataLayer variables** in the gtm with the names:<br>
+ustreamEventAction<br>
+ustreamEventCategory<br>
+ustreamEventLabel<br>
 
 2. **Create a new trigger** with the name: ustreamTriggerEvent
 
