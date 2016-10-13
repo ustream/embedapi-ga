@@ -53,3 +53,19 @@ The following events can be listened:
 * live
 * finished
 * offline
+
+## Methods
+
+### destroy
+Removes all event listeners from the player.
+#### example:
+```javascript
+ustreamGa.destroy();
+```
+
+### init
+Attaches all event listeners to the player that were previously defined.
+#### example:
+```javascript
+ustreamGa.init();
+```
