@@ -36,7 +36,7 @@ var UstreamEmbedGa = (function() {
                     return eventsAll;
                 }
 
-                if (Object.prototype.toString.call(options.listenTo) !== '[object Array]') {
+                if (options.listenTo instanceof Array) {
                     return eventsAll;
                 }
 
