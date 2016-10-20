@@ -9,7 +9,7 @@ window.UstreamEmbed = (function() {
         },
         trigger: function(event) {
             if (this.eventCallbacks[event]) {
-                this.eventCallbacks[event].call();
+                this.eventCallbacks[event].call(this, event, true);
             }
         },
         getProperty: function(event, cb) {

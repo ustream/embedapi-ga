@@ -356,7 +356,8 @@ var UstreamEmbed = (function () {
  *
  */
 var UstreamEmbedGa = (function() {
-    var eventsAll = ['live', 'offline', 'finished', 'playing'];
+    var eventsToAttach = ['live', 'offline', 'finished', 'playing'];
+    var eventsAll = ['live', 'offline', 'finished', 'playing', 'stopped'];
 
     function getEvent(eventType, eventStatus) {
         var result = eventType;
@@ -395,20 +396,24 @@ var UstreamEmbedGa = (function() {
             })();
 
         function handleListeners(task) {
-            var length = eventsToListen.length;
+            var length = eventsToAttach.length;
             var i;
 
             for (i = 0; i < length; i++) {
                 if (task === 'add' || !task) {
-                    viewer.addListener(eventsToListen[i], listener);
+                    viewer.addListener(eventsToAttach[i], listener);
                 } else {
-                    viewer.removeListener(eventsToListen[i], listener);
+                    viewer.removeListener(eventsToAttach[i], listener);
                 }
             }
         }
 
         function listener(eventType, eventStatus) {
             var eventAction = getEvent(eventType, eventStatus);
+
+            if (eventsToListen.indexOf(eventAction) === -1) {
+                return;
+            }
 
             if (window.dataLayer) {
                 dataLayer.push({

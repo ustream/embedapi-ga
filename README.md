@@ -49,7 +49,8 @@ var ustreamGa = UstreamEmbedGa(viewer, {
 In the above example the player only listens to the: playing, stopped, and live events.
 
 The following events can be listened:
-* playing (includes the stopped event)
+* playing
+* stopped
 * live
 * finished
 * offline

@@ -18,10 +18,12 @@ gulp.task('jscompress', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('test', function() {
+gulp.task('test', ['jscompress'], function() {
     return gulp
         .src('tests/testrunner.html')
         .pipe(mochaPhantomJS());
 });
 
 gulp.task('default', ['jscompress']);
+
+gulp.task('build', ['jscompress']);
