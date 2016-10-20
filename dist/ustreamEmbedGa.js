@@ -383,7 +383,7 @@ var UstreamEmbedGa = (function() {
                     return eventsAll;
                 }
 
-                if (options.listenTo instanceof Array) {
+                if (!(options.listenTo instanceof Array)) {
                     return eventsAll;
                 }
 
